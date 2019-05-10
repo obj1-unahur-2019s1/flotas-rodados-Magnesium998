@@ -1,0 +1,28 @@
+import auto.*
+
+test "corsa" {
+
+	var corsa = new ChevroletCorsa
+	corsa.color("azul")
+	assert.equals("azul", corsa.color())
+	assert.equals(1300, corsa.peso())
+	assert.equals(150, corsa.velocidadMaxima())
+}
+
+test "kwid" {
+	var kwid = new RenaultKwid
+	kwid.tieneTanque(true)
+	assert.equals(1350,kwid.peso())
+	assert.equals(120 ,kwid.velocidadMaxima())
+	assert.equals(3 ,kwid.capacidad())
+	assert.equals("azul" ,kwid.color())
+}
+
+test "kwid2" {
+	var kwid2 = new RenaultKwid
+	kwid2.tieneTanque(false)
+	assert.equals(1200 ,kwid2.peso())
+	assert.equals(4 ,kwid2.capacidad())
+	assert.equals(110 ,kwid2.velocidadMaxima())
+	assert.equals("azul" ,kwid2.color())
+}

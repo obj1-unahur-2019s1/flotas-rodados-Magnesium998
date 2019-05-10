@@ -1,0 +1,32 @@
+import auto.*
+import dependencia.*
+
+
+describe "cachito" {
+	const cachito = new ChevroletCorsa(color = "rojo")
+	
+
+test "dependencia" {
+	const deporte = new Dependencia(empleados = 45)	
+	var kwid = new RenaultKwid(tieneTanque = true)
+	var corsaVerde = new ChevroletCorsa(color = "verde")
+	var corsaAzul = new ChevroletCorsa(color = "azul")
+	
+	deporte.agregarFlota(cachito)
+	deporte.agregarFlota(kwid)
+	deporte.agregarFlota(corsaVerde)
+	deporte.agregarFlota(corsaAzul)
+	
+
+test "cultura" {
+	const cultura = new Dependencia(empleados = 31)
+	var kwid0 = new Dependencia(tieneTanque = true)
+	var kwid1 = new Dependencia(tieneTanque = true)
+	var kwid2 = new Dependencia(tieneTanque = false)
+	
+	cultura.agregar(cachito)
+	cultura.agregar()
+	cultura.agregar(kwid1)
+	cultura.agregar(kwid2)
+	cultura.agregar(trafic)
+}
